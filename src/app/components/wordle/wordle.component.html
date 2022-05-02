@@ -1,0 +1,13 @@
+<div *ngFor="let guess of guesses | async">
+  <div *ngIf="guess" class="row past">
+    <div *ngFor="let letter of guess" [ngClass]="letter.color">{{ letter.key }}</div>
+  </div>
+
+  <div *ngIf="!guess" class="row">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
